@@ -1,7 +1,7 @@
 {
   "name": "git-city-on-react",
   "version": "0.1.0",
-  "homepage": "https://Be30nCH1k.github.io/GitCityOnReact",
+  "homepage": "https://be30nch1k.github.io/git-city-on-react",
   "private": true,
   "dependencies": {
     "@react-google-maps/api": "^2.20.5",
