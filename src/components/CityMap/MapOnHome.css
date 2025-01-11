@@ -1,0 +1,16 @@
+.MapOnHome {
+  margin-top: 80px;
+
+}
+.MapOnHome h2 {
+  color: #000;
+}
+.MapOnHome div {
+  display: flex;
+  justify-content: center;
+}
+@media (max-width: 450px) {
+  .MapOnHome div {
+    margin-top: 50px;
+  }
+}

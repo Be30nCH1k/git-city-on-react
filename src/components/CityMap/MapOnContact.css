@@ -1,0 +1,9 @@
+
+.MapOnContact {
+    margin-top: 240px;
+}
+@media (max-width: 450px) {
+    .MapOnContact {
+        margin-top: 50px;
+    }
+}
