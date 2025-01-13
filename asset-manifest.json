@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/git-city-on-react/static/css/main.03f2e62b.css",
-    "main.js": "/git-city-on-react/static/js/main.93cdc1ac.js",
-    "static/media/polo-photoaidcom-darken.jpg": "/git-city-on-react/static/media/polo-photoaidcom-darken.56c6539af15d30d9c1b1.jpg",
+    "main.css": "/git-city-on-react/static/css/main.fbbe2316.css",
+    "main.js": "/git-city-on-react/static/js/main.956443c6.js",
+    "static/media/86-photoaidcom-darken.jpg": "/git-city-on-react/static/media/86-photoaidcom-darken.286f97e3fd8945b1c4aa.jpg",
     "index.html": "/git-city-on-react/index.html",
-    "main.03f2e62b.css.map": "/git-city-on-react/static/css/main.03f2e62b.css.map",
-    "main.93cdc1ac.js.map": "/git-city-on-react/static/js/main.93cdc1ac.js.map"
+    "main.fbbe2316.css.map": "/git-city-on-react/static/css/main.fbbe2316.css.map",
+    "main.956443c6.js.map": "/git-city-on-react/static/js/main.956443c6.js.map"
   },
   "entrypoints": [
-    "static/css/main.03f2e62b.css",
-    "static/js/main.93cdc1ac.js"
+    "static/css/main.fbbe2316.css",
+    "static/js/main.956443c6.js"
   ]
 }
