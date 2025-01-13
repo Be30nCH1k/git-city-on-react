@@ -1,5 +1,5 @@
-// src/pages/HomePage/HomePage.jsx
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import Header from '../../components/Header/Header';
 import PopularCities from '../../components/PopularCities/PopularCities';
 import PopularAttractions from '../../components/PopularAttractions/PopularAttractions';
@@ -8,20 +8,22 @@ import CityMap from '../../components/CityMap/CityMap';
 import Footer from '../../components/Footer/Footer';
 
 const HomePage = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="home-page">
       <Header />
-      <section className="main__section">
-        <div id="main__slider">
-          <img className="main__img" src="/assets/backroundImg/main_backgroud-darken.jpg" alt="" />
-          <img className="main__img" src="/assets/backroundImg/86-photoaidcom-darken.jpg" alt="" />
-          <img className="main__img" src="/assets/backroundImg/orig-photoaidcom-darken.jpg" alt="" />
-        </div>
-        <div className="header__title">
-          <h1>САМЫЕ ЛУЧШИЕ ЭКСКУРСИИ</h1>
-          <div>Покажем каждый уголок города не ходя кругами</div>
-        </div>
-      </section>
+        <section className="main__section">
+          <div id="main__slider">
+            <img className="main__img" src="/assets/backroundImg/main_backgroud-darken.jpg" alt="" />
+            <img className="main__img" src="/assets/backroundImg/86-photoaidcom-darken.jpg" alt="" />
+            <img className="main__img" src="/assets/backroundImg/orig-photoaidcom-darken.jpg" alt="" />
+          </div>
+          <div className="header__title">
+            <h1>{t('bestTours')}</h1>
+            <div>{t('showEveryCorner')}</div>
+          </div>
+        </section>
       <PopularCities />
       <PopularAttractions />
       <GuaranteesSlider />

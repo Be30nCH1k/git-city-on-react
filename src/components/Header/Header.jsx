@@ -1,9 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Header.css';
-
+import { useTranslation } from 'react-i18next';
 
 const Header = () => {
+  const { t, i18n } = useTranslation();
+
+  const changeLanguage = (language) => {
+    i18n.changeLanguage(language); // Изменение языка
+  };
+
   return (
     <header className="header">
       <nav className="header__nav">
@@ -11,19 +17,25 @@ const Header = () => {
           <img src="/assets/img/logo.webp" alt="logo" className="header__img" />
         </Link>
         <ul className="header__list">
-          <li><Link className="main__btn" to="/">Домой</Link></li>
-          <li><Link className="main__btn" to="/attractions">Достопримечательности</Link></li>
-          <li><Link className="main__btn" to="/contact">Контакты</Link></li>
+          <li><Link className="main__btn" to="/">{t('home')}</Link></li>
+          <li><Link className="main__btn" to="/attractions">{t('attractions')}</Link></li>
+          <li><Link className="main__btn" to="/contact">{t('contact')}</Link></li>
         </ul>
+          <button onClick={() => changeLanguage('en')}>
+            <img src="https://flagcdn.com/us.svg" alt="English" width="50" />
+          </button>
+          <button onClick={() => changeLanguage('ru')}>
+            <img src="https://flagcdn.com/ru.svg" alt="Русский" width="50" />
+          </button>
       </nav>
-      <div class="menu">
-          <input type="checkbox" id="burger-checkbox" class="burger-checkbox" />
-          <label for="burger-checkbox" class="burger"></label>
-          <ul class="menu-list">
-              <li><Link class="menu-item" to="/">Домой</Link></li>
-              <li><Link class="menu-item" to="/attractions">Достопримечательности</Link></li>
-              <li><Link class="menu-item" to="/contact">Контакты</Link></li>
-          </ul>
+      <div className="menu">
+        <input type="checkbox" id="burger-checkbox" className="burger-checkbox" />
+        <label htmlFor="burger-checkbox" className="burger"></label>
+        <ul className="menu-list">
+          <li><Link className="menu-item" to="/">{t('home')}</Link></li>
+          <li><Link className="menu-item" to="/attractions">{t('attractions')}</Link></li>
+          <li><Link className="menu-item" to="/contact">{t('contact')}</Link></li>
+        </ul>
       </div>
     </header>
   );

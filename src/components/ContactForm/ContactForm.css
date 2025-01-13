@@ -1,10 +1,11 @@
 .container {
     display: flex;
     justify-content: center;
-    margin-top: 50px;
+    margin-top: 40px;
 }
   
 .container button {
+
     color: #000;
     padding: 40px 40px;
     border-radius: 24px;
@@ -13,7 +14,7 @@
     transition: all 0.5s;
 }
   
-@media (max-width: 376px) {
+@media (max-width: 450px) {
     .container button {
       padding: 20px 20px;
     }
@@ -49,7 +50,7 @@
     transition: transform 0.4s ease-in-out;
 }
   
-@media (max-width: 376px) {
+@media (max-width: 450px) {
     .social-panel-container {
       left: 20px;
       bottom: 675px;
@@ -93,6 +94,7 @@
 }
   
 .floating-btn {
+
     border-radius: 26.5px;
     background-color: #001F61;
     border: 1px solid #001F61;
@@ -115,12 +117,12 @@
     outline: none;
 }
   
-.obratnuj__zvonok {
+.call__back {
     width: 100%;
     max-width: 350px;
 }
   
-.form__zvonok {
+.form__call {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -128,7 +130,7 @@
     box-sizing: border-box;
 }
   
-.form__zvonok div {
+.form__call div {
     padding: 15px 0;
 }
   
@@ -137,28 +139,28 @@
     width: 100%;
 }
   
-.form__zvonok label,
-.form__zvonok input {
+.form__call label,
+.form__call input {
     display: block;
     width: 100%;
     box-sizing: border-box;
 }
   
-.form__zvonok label {
+.form__call label {
     margin-bottom: 5px;
     font-weight: bold;
 }
   
-.form__zvonok input {
+.form__call input {
     padding: 10px 15px;
     margin-top: 10px;
 }
   
-.form__zvonok label span {
+.form__call label span {
     color: red;
 }
   
-.form__zvonok .send__mail {
+.form__call .send__mail {
     padding: 15px;
     margin-top: 10px;
     background: none;

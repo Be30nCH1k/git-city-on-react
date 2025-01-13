@@ -58,6 +58,12 @@ body {
   justify-content: space-around;
   margin-bottom: -200px;
 }
+@media (max-width: 450px) {
+  .header__nav {
+    margin-bottom: 0;
+  }
+}
+
 .header__list {
   display: flex;
   padding: 25px;
@@ -219,4 +225,18 @@ body {
     display: block;
     padding-top: 10px;
   }
+}
+nav button{
+  width: 80px;
+  cursor: pointer;
+  outline: none; 
+  border: 0;
+  background: transparent;
+
+}
+nav button img:hover{
+  background-color: #008cff;
+  padding: 10px;
+  border-radius: 8px;
+  transition: all 0.1s;
 }
