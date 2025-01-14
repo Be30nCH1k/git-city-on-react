@@ -1,55 +1,53 @@
 .main__section-attr {
-    background: url(../../../public/assets/img/polo-photoaidcom-darken.jpg) no-repeat center center/cover;
+    background: url(../../../public/assets/img/polo-photoaidcom-darken.jpg)
+        no-repeat center center/cover;
     height: 60vh;
     margin-top: 200px;
-
-  }
-  @media (max-width: 450px) {
+}
+@media (max-width: 450px) {
     .main__section-attr {
-
         margin-top: 0px;
-    
-      }
-  }
-  .header__title-attr {
+    }
+}
+.header__title-attr {
     text-align: center;
     font-weight: 400;
     color: white;
     padding-top: 150px;
-  }
-  @media (max-width: 450px) {
+}
+@media (max-width: 450px) {
     .header__title-attr {
         padding-top: 60px;
-      }
-  }
-  .header__title-attr h1 {
+    }
+}
+.header__title-attr h1 {
     font-size: 72px;
     font-weight: 400;
-  }
-  @media (max-width: 450px) {
+}
+@media (max-width: 450px) {
     .header__title-attr h1 {
-      font-size: 30px;
-      font-weight: 600;
+        font-size: 30px;
+        font-weight: 600;
     }
-  }
-  .header__title-attr div {
+}
+.header__title-attr div {
     font-size: 48px;
-  }
-  .header__search {
+}
+.header__search {
     margin-top: 100px;
     text-align: center;
-  }
-  @media (max-width: 450px) {
+}
+@media (max-width: 450px) {
     .header__search {
         margin-top: 50px;
-      }
-  }
-  .header__search form {
+    }
+}
+.header__search form {
     position: relative;
     width: 300px;
     margin: 0 auto;
-  }
-  .header__search input {
+}
+.header__search input {
     width: 800px;
     height: 75px;
     padding-left: 10px;
@@ -59,9 +57,9 @@
     background: #ffffff;
     color: #000000;
     font-size: 24px;
-  }
-  @media (max-width: 450px) {
+}
+@media (max-width: 450px) {
     .header__search input {
-      width: 350px;
+        width: 350px;
     }
-  }
+}

@@ -2,135 +2,135 @@
     margin: 0;
     padding: 0;
     font-family: roboto;
-  }
-  
-  li {
+}
+
+li {
     list-style: none;
-  }
-  
-  a {
+}
+
+a {
     text-decoration: none;
-  }
-  
-  body {
+}
+
+body {
     overflow-x: hidden;
-  }
-  .populyar {
+}
+.populyar {
     background-color: #f7f7f7;
     height: 55vh;
-  }
-  @media (max-width: 450px) {
+}
+@media (max-width: 450px) {
     .populyar {
-      background-color: #fff;
+        background-color: #fff;
     }
-  }
-  
-  .populyar__block {
+}
+
+.populyar__block {
     display: flex;
     justify-content: center;
     -moz-column-gap: 30px;
-         column-gap: 30px;
-  }
-  @media (max-width: 450px) {
+    column-gap: 30px;
+}
+@media (max-width: 450px) {
     .populyar__block div:first-child {
-      margin-top: 0;
+        margin-top: 0;
     }
-  }
-  @media (max-width: 450px) {
+}
+@media (max-width: 450px) {
     .populyar__block {
-      display: block;
+        display: block;
     }
-  }
-  .populyar__title {
+}
+.populyar__title {
     font-size: 46px;
     text-align: center;
     padding: 30px;
     color: white;
     font-weight: 600;
-  }
-  @media (max-width: 450px) {
+}
+@media (max-width: 450px) {
     .populyar__title {
-      padding: 0 20px;
+        padding: 0 20px;
     }
-  }
-  .populyar a {
+}
+.populyar a {
     color: #000000;
     font-size: 24px;
     display: flex;
     justify-content: center;
     padding: 20px;
-  }
-  .populyar__box{
+}
+.populyar__box {
     display: flex;
     justify-content: center;
-  }
-  @media (max-width: 450px) {
+}
+@media (max-width: 450px) {
     .populyar__box {
-      position: relative;
-      margin-top: 50px;
+        position: relative;
+        margin-top: 50px;
     }
-  }
-  .populyar__box div {
+}
+.populyar__box div {
     top: 480px;
     position: absolute;
     font-size: 36px;
     font-weight: 600;
     color: #ffffff;
     transition: all 0.3s ease;
-  }
-  @media (max-width: 450px) {
+}
+@media (max-width: 450px) {
     .populyar__box div {
-      top: 250px;
-      z-index: 1;
-      font-size: 30px;
-      padding-left: 25px;
+        top: 250px;
+        z-index: 1;
+        font-size: 30px;
+        padding-left: 25px;
     }
-  }
-  .populyar__box:hover div {
+}
+.populyar__box:hover div {
     font-size: 46px;
-  }
-  @media (max-width: 450px) {
+}
+@media (max-width: 450px) {
     .populyar__box:hover div {
-      font-size: 35px;
+        font-size: 35px;
     }
-  }
-  
-  .populyar__big-box {
+}
+
+.populyar__big-box {
     position: absolute;
     left: 125px;
     bottom: -410px;
-  }
-  @media (max-width: 450px) {
+}
+@media (max-width: 450px) {
     .populyar__big-box div:first-child {
-      color: #000;
-      font-size: 30px;
+        color: #000;
+        font-size: 30px;
     }
-  }
-  @media (max-width: 450px) {
+}
+@media (max-width: 450px) {
     .populyar__big-box {
-      position: relative;
-      left: 0;
-      bottom: 0;
+        position: relative;
+        left: 0;
+        bottom: 0;
     }
-  }
-  .populyar__item:hover {
+}
+.populyar__item:hover {
     transform: scale(1.1);
-  }
-  .populyar__item {
+}
+.populyar__item {
     width: 500px;
     height: 600px;
     transition: transform 0.5s ease;
-  }
-  @media (max-width: 450px) {
+}
+@media (max-width: 450px) {
     .populyar__item {
-      width: 300px;
-      height: 350px;
+        width: 300px;
+        height: 350px;
     }
-  }
-  .populyar__meta-item p {
+}
+.populyar__meta-item p {
     transform: translateX(0px);
     transition: all 0.3s ease;
-  }
-  .populyar__meta-item:hover p {
+}
+.populyar__meta-item:hover p {
     transform: translateX(8px);
-  }
+}

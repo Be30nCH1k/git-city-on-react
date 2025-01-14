@@ -6,9 +6,9 @@
     background-color: #f9f9f9;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .back-btn {
+}
+
+.back-btn {
     background-color: #007bff;
     color: white;
     border: none;
@@ -16,97 +16,97 @@
     border-radius: 5px;
     cursor: pointer;
     margin-bottom: 20px;
-  }
-  
-  .back-btn:hover {
+}
+
+.back-btn:hover {
     background-color: #0056b3;
-  }
-  
-  .attraction-detail h1 {
+}
+
+.attraction-detail h1 {
     font-size: 36px;
     text-align: center;
     margin-bottom: 20px;
     color: #333;
-  }
-  
-  .attraction-detail img {
+}
+
+.attraction-detail img {
     width: 100%;
     max-height: 800px;
     object-fit: none;
     border-radius: 10px;
     margin-bottom: 20px;
-  }
-  
-  .attraction-detail p {
+}
+
+.attraction-detail p {
     font-size: 18px;
     line-height: 1.6;
     color: #555;
     margin-bottom: 20px;
-  }
-  
-  /* Галерея изображений */
-  .modal__gallery {
+}
+
+/* Галерея изображений */
+.modal__gallery {
     display: flex;
     gap: 10px;
     margin-bottom: 20px;
     overflow-x: auto;
-  }
-  
-  .modal__gallery-item {
+}
+
+.modal__gallery-item {
     width: 150px;
     height: 275px;
     object-fit: cover;
     border-radius: 5px;
     cursor: pointer;
     transition: transform 0.3s ease;
-  }
-  
-  .modal__gallery-item:hover {
+}
+
+.modal__gallery-item:hover {
     transform: scale(1.1);
-  }
-  
-  .modal__reviews {
+}
+
+.modal__reviews {
     margin-top: 20px;
     padding: 20px;
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .modal__reviews h3 {
+}
+
+.modal__reviews h3 {
     font-size: 24px;
     margin-bottom: 20px;
     color: #333;
-  }
-  
-  .reviews-list {
+}
+
+.reviews-list {
     max-height: 300px;
     overflow-y: auto;
     margin-bottom: 20px;
-  }
-  
-  .review {
+}
+
+.review {
     border-bottom: 1px solid #ddd;
     padding: 10px 0 0 30px;
-  }
-  
-  .review__author {
+}
+
+.review__author {
     font-weight: bold;
     color: #333;
-  }
-  
-  .review__text {
+}
+
+.review__text {
     font-size: 16px;
     color: #555;
     margin: 5px 0;
-  }
-  
-  .review__rating {
+}
+
+.review__rating {
     color: #ffc107;
     font-size: 16px;
-  }
-  
-  .review__delete {
+}
+
+.review__delete {
     background-color: #ff4d4d;
     color: white;
     border: none;
@@ -114,50 +114,50 @@
     border-radius: 5px;
     cursor: pointer;
     margin-top: 10px;
-  }
-  
-  .review__delete:hover {
+}
+
+.review__delete:hover {
     background-color: #cc0000;
-  }
-  
-  /* Форма добавления отзыва */
-  .review-form {
+}
+
+/* Форма добавления отзыва */
+.review-form {
     margin-top: 20px;
-  }
-  
-  .review-form input,
-  .review-form textarea {
+}
+
+.review-form input,
+.review-form textarea {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
-  }
-  
-  .review-form textarea {
+}
+
+.review-form textarea {
     height: 100px;
     resize: vertical;
-  }
-  
-  .rating {
+}
+
+.rating {
     display: flex;
     gap: 5px;
     margin-bottom: 10px;
-  }
-  
-  .rating__star {
+}
+
+.rating__star {
     font-size: 24px;
     color: #ccc;
     cursor: pointer;
     transition: color 0.3s ease;
-  }
-  
-  .rating__star.selected {
+}
+
+.rating__star.selected {
     color: #ffc107;
-  }
-  
-  .review-form button {
+}
+
+.review-form button {
     background-color: #28a745;
     color: white;
     border: none;
@@ -165,14 +165,14 @@
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
-  }
-  
-  .review-form button:hover {
+}
+
+.review-form button:hover {
     background-color: #218838;
-  }
-  
-  /* Полноэкранная галерея */
-  .fullscreen-gallery {
+}
+
+/* Полноэкранная галерея */
+.fullscreen-gallery {
     position: fixed;
     top: 0;
     left: 0;
@@ -183,15 +183,15 @@
     justify-content: center;
     align-items: center;
     z-index: 1000;
-  }
-  
-  .fullscreen-image {
+}
+
+.fullscreen-image {
     max-width: 90%;
     max-height: 90%;
     object-fit: contain;
-  }
-  
-  .close-fullscreen {
+}
+
+.close-fullscreen {
     position: absolute;
     top: 20px;
     right: 20px;
@@ -200,10 +200,10 @@
     color: white;
     font-size: 24px;
     cursor: pointer;
-  }
-  
-  .gallery-prev-fullscreen,
-  .gallery-next-fullscreen {
+}
+
+.gallery-prev-fullscreen,
+.gallery-next-fullscreen {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -212,108 +212,108 @@
     color: white;
     font-size: 24px;
     cursor: pointer;
-  }
-  
-  .gallery-prev-fullscreen {
+}
+
+.gallery-prev-fullscreen {
     left: 20px;
-  }
-  
-  .gallery-next-fullscreen {
+}
+
+.gallery-next-fullscreen {
     right: 20px;
-  }
-  
-  /* Адаптивные стили */
-  @media (max-width: 768px) {
+}
+
+/* Адаптивные стили */
+@media (max-width: 768px) {
     .attraction-detail h1 {
-      font-size: 28px;
+        font-size: 28px;
     }
-  
+
     .attraction-detail img {
-      max-height: 300px;
+        max-height: 300px;
     }
-  
+
     .modal__gallery-item {
-      width: 100px;
-      height: 75px;
+        width: 100px;
+        height: 75px;
     }
-  
+
     .modal__reviews h3 {
-      font-size: 20px;
+        font-size: 20px;
     }
-  
+
     .review__text {
-      font-size: 14px;
+        font-size: 14px;
     }
-  
+
     .review-form input,
     .review-form textarea {
-      font-size: 14px;
+        font-size: 14px;
     }
-  
+
     .rating__star {
-      font-size: 20px;
+        font-size: 20px;
     }
-  
+
     .review-form button {
-      font-size: 14px;
+        font-size: 14px;
     }
-  }
-  
-  @media (max-width: 450px) {
+}
+
+@media (max-width: 450px) {
     .attraction-detail {
-      padding: 10px;
+        padding: 10px;
     }
-  
+
     .attraction-detail h1 {
-      font-size: 24px;
+        font-size: 24px;
     }
-  
+
     .attraction-detail img {
-      max-height: 200px;
+        max-height: 200px;
     }
-  
+
     .modal__gallery-item {
-      width: 80px;
-      height: 60px;
+        width: 80px;
+        height: 60px;
     }
-  
+
     .modal__reviews h3 {
-      font-size: 18px;
+        font-size: 18px;
     }
-  
+
     .review__text {
-      font-size: 12px;
+        font-size: 12px;
     }
-  
+
     .review-form input,
     .review-form textarea {
-      font-size: 12px;
+        font-size: 12px;
     }
-  
+
     .rating__star {
-      font-size: 18px;
+        font-size: 18px;
     }
-  
+
     .review-form button {
-      font-size: 12px;
+        font-size: 12px;
     }
-  }
-  #map {
+}
+#map {
     width: 100%;
     height: 400px;
     margin-top: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  @media (max-width: 768px) {
+}
+
+@media (max-width: 768px) {
     #map {
-      height: 300px;
+        height: 300px;
     }
-  }
-  
-  @media (max-width: 450px) {
+}
+
+@media (max-width: 450px) {
     #map {
-      height: 200px;
+        height: 200px;
     }
-  }
+}
