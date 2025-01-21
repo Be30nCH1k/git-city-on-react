@@ -111,6 +111,7 @@ const resources = {
             backToList: "Back to list",
 
             loading: "loading",
+            ErrorLoad: "Error Loading",
         },
     },
     ru: {
@@ -218,6 +219,7 @@ const resources = {
                 },
             ],
             backToList: "Вернуться назад",
+            ErrorLoad: "Проблема загрузки",
         },
     },
 };

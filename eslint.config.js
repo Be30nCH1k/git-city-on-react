@@ -35,6 +35,10 @@ export default [
             "no-console": "off",
             "react/jsx-uses-react": "off",
             "react/react-in-jsx-scope": "off",
+            "no-unused-vars": [
+                "warn",
+                { vars: "all", args: "after-used", ignoreRestSiblings: true },
+            ],
         },
     },
 

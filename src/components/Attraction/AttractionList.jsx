@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import "./AttractionList.css";
-import MainSectionAttr from "../MainSectionAttr/MainSectionAttr";
 import { useTranslation } from "react-i18next";
 
 const AttractionList = () => {
@@ -147,7 +146,7 @@ const AttractionList = () => {
                     <div className="spinner"></div>{" "}
                 </div>
             ) : isError ? (
-                <div className="ErrorLoad">Проблема загрузки</div>
+                <div className="ErrorLoad">{t("ErrorLoad")}</div>
             ) : (
                 <div id="data-list">
                     {sortedAttractions.map((attraction, index) => (
