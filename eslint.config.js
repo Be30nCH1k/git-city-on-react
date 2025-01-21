@@ -6,10 +6,12 @@ import eslintConfigPrettier from "eslint-config-prettier";
 
 /** @type {import('eslint').Linter.FlatConfig[]} */
 export default [
+    // Базовая конфигурация ESLint
     js.configs.recommended,
 
+    // Конфигурация для JS/JSX файлов
     {
-        files: ["*.jsx", "*.js"],
+        files: ["**/*.{js,jsx}"], // Обрабатываем только JS и JSX файлы
         languageOptions: {
             globals: {
                 ...globals.node,
@@ -30,13 +32,14 @@ export default [
         rules: {
             ...eslintConfigPrettier.rules,
             "prettier/prettier": "error",
-            "no-console": "warn",
+            "no-console": "off",
             "react/jsx-uses-react": "off",
             "react/react-in-jsx-scope": "off",
         },
     },
 
+    // Игнорируемые папки и файлы
     {
-        ignores: ["node_modules", "dist"],
+        ignores: ["node_modules", "dist", "build"],
     },
 ];
