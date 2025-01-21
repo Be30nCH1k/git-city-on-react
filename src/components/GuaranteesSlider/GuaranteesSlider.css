@@ -73,18 +73,7 @@
     padding-top: 10px;
     font-weight: 300;
 }
-@media (max-width: 450px) {
-    #right {
-        top: 115%;
-        right: 150px;
-    }
-}
-@media (max-width: 450px) {
-    #left {
-        top: 115%;
-        left: 150px;
-    }
-}
+
 .wrapper i {
     top: 50%;
     height: 50px;
@@ -110,9 +99,10 @@
 }
 
 .wrapper i:last-child {
-    right: -50px;
+    right: -20px;
 }
 
+/* адаптация для телефона 450px */
 @media (max-width: 450px) {
     .wrapper {
         padding: 0 20px;
@@ -125,5 +115,171 @@
     .slider__text-box {
         width: 100%;
         padding-left: 10px;
+    }
+
+    #right {
+        top: 115%;
+        right: 150px;
+    }
+
+    #left {
+        top: 115%;
+        left: 150px;
+    }
+}
+
+/* адаптация для планшето 768px */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .wrapper {
+        max-width: 900px;
+        padding: 0 40px;
+    }
+
+    .slider__box {
+        padding: 40px 20px;
+    }
+
+    .slider__text-box {
+        width: 300px;
+    }
+
+    .slider__text-box div {
+        font-size: 22px;
+    }
+
+    .slider__text-box p {
+        font-size: 16px;
+    }
+
+    .wrapper i {
+        height: 45px;
+        width: 45px;
+        font-size: 1.1rem;
+        line-height: 45px;
+    }
+
+    .wrapper i:first-child {
+        left: -20px;
+    }
+
+    .wrapper i:last-child {
+        right: -40px;
+    }
+}
+
+/* адаптация для ноут 1024px */
+@media (min-width: 1024px) and (max-width: 1440px) {
+    .wrapper {
+        max-width: 1100px;
+        padding: 0 50px;
+    }
+
+    .slider__box {
+        padding: 40px 30px;
+    }
+
+    .slider__text-box {
+        width: 350px;
+    }
+
+    .slider__text-box div {
+        font-size: 24px;
+    }
+
+    .slider__text-box p {
+        font-size: 18px;
+    }
+
+    .wrapper i {
+        height: 50px;
+        width: 50px;
+        font-size: 1.25rem;
+        line-height: 50px;
+    }
+
+    .wrapper i:first-child {
+        left: -15px;
+    }
+
+    .wrapper i:last-child {
+        right: -20px;
+    }
+}
+
+/* адаптация для full hd 1440px */
+@media (min-width: 1440px) and (max-width: 1920px) {
+    .wrapper {
+        max-width: 1000px;
+        padding: 0 60px;
+    }
+
+    .slider__box {
+        padding: 50px 40px;
+    }
+
+    .slider__text-box {
+        width: 400px;
+    }
+
+    .slider__text-box div {
+        font-size: 26px;
+    }
+
+    .slider__text-box p {
+        font-size: 20px;
+    }
+
+    .wrapper i {
+        height: 55px;
+        width: 55px;
+        font-size: 1.3rem;
+        line-height: 55px;
+    }
+
+    .wrapper i:first-child {
+        left: -5px;
+    }
+
+    .wrapper i:last-child {
+        right: -20px;
+    }
+}
+
+/* адаптация для 2k 1920px */
+@media (min-width: 1920px) {
+    .wrapper {
+        max-width: 1500px;
+        padding: 0 70px;
+    }
+
+    .slider__box {
+        padding: 60px 50px;
+    }
+
+    .slider__text-box {
+        width: 450px;
+    }
+
+    .slider__text-box div {
+        font-size: 28px;
+    }
+
+    .slider__text-box p {
+        font-size: 22px;
+    }
+
+    .wrapper i {
+        height: 60px;
+        width: 60px;
+        font-size: 1.4rem;
+        line-height: 60px;
+    }
+
+    .wrapper i:first-child {
+        left: -70px;
+    }
+
+    .wrapper i:last-child {
+        right: -20px;
     }
 }

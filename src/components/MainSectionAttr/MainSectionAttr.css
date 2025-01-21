@@ -4,49 +4,185 @@
     height: 60vh;
     margin-top: 200px;
 }
+
 @media (max-width: 450px) {
     .main__section-attr {
         margin-top: 0px;
     }
 }
+
+@media (min-width: 451px) and (max-width: 768px) {
+    .main__section-attr {
+        margin-top: 100px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+    .main__section-attr {
+        margin-top: 150px;
+    }
+}
+
+@media (min-width: 1201px) and (max-width: 1920px) {
+    .main__section-attr {
+        margin-top: 200px;
+    }
+}
+
+@media (min-width: 1921px) {
+    .main__section-attr {
+        margin-top: 250px;
+    }
+}
+
 .header__title-attr {
     text-align: center;
     font-weight: 400;
     color: white;
     padding-top: 150px;
 }
+
 @media (max-width: 450px) {
     .header__title-attr {
         padding-top: 60px;
     }
 }
+
+@media (min-width: 451px) and (max-width: 768px) {
+    .header__title-attr {
+        padding-top: 100px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+    .header__title-attr {
+        padding-top: 120px;
+    }
+}
+
+@media (min-width: 1201px) and (max-width: 1920px) {
+    .header__title-attr {
+        padding-top: 150px;
+    }
+}
+
+@media (min-width: 1921px) {
+    .header__title-attr {
+        padding-top: 200px;
+    }
+}
+
 .header__title-attr h1 {
     font-size: 72px;
     font-weight: 400;
 }
+
 @media (max-width: 450px) {
     .header__title-attr h1 {
         font-size: 30px;
         font-weight: 600;
     }
 }
+
+@media (min-width: 451px) and (max-width: 768px) {
+    .header__title-attr h1 {
+        font-size: 40px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+    .header__title-attr h1 {
+        font-size: 50px;
+    }
+}
+
+@media (min-width: 1201px) and (max-width: 1920px) {
+    .header__title-attr h1 {
+        font-size: 72px;
+    }
+}
+
+@media (min-width: 1921px) {
+    .header__title-attr h1 {
+        font-size: 90px;
+    }
+}
+
 .header__title-attr div {
     font-size: 48px;
 }
+
+@media (max-width: 450px) {
+    .header__title-attr div {
+        font-size: 24px;
+    }
+}
+
+@media (min-width: 451px) and (max-width: 768px) {
+    .header__title-attr div {
+        font-size: 32px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+    .header__title-attr div {
+        font-size: 40px;
+    }
+}
+
+@media (min-width: 1201px) and (max-width: 1920px) {
+    .header__title-attr div {
+        font-size: 48px;
+    }
+}
+
+@media (min-width: 1921px) {
+    .header__title-attr div {
+        font-size: 60px;
+    }
+}
+
 .header__search {
     margin-top: 100px;
     text-align: center;
 }
+
 @media (max-width: 450px) {
     .header__search {
         margin-top: 50px;
     }
 }
+
+@media (min-width: 451px) and (max-width: 768px) {
+    .header__search {
+        margin-top: 75px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+    .header__search {
+        margin-top: 100px;
+    }
+}
+
+@media (min-width: 1201px) and (max-width: 1920px) {
+    .header__search {
+        margin-top: 120px;
+    }
+}
+
+@media (min-width: 1921px) {
+    .header__search {
+        margin-top: 150px;
+    }
+}
+
 .header__search form {
     position: relative;
     width: 300px;
     margin: 0 auto;
 }
+
 .header__search input {
     width: 800px;
     height: 75px;
@@ -58,8 +194,33 @@
     color: #000000;
     font-size: 24px;
 }
+
 @media (max-width: 450px) {
     .header__search input {
         width: 350px;
+    }
+}
+
+@media (min-width: 451px) and (max-width: 768px) {
+    .header__search input {
+        width: 500px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+    .header__search input {
+        width: 600px;
+    }
+}
+
+@media (min-width: 1201px) and (max-width: 1920px) {
+    .header__search input {
+        width: 800px;
+    }
+}
+
+@media (min-width: 1921px) {
+    .header__search input {
+        width: 1000px;
     }
 }

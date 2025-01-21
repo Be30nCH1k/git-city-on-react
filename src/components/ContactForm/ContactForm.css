@@ -13,12 +13,6 @@
     transition: all 0.5s;
 }
 
-@media (max-width: 450px) {
-    .container button {
-        padding: 20px 20px;
-    }
-}
-
 .container button:hover {
     background-color: #01b3a7;
     border: 0px;
@@ -47,13 +41,6 @@
     bottom: 80px;
     transform: translateX(100%);
     transition: transform 0.4s ease-in-out;
-}
-
-@media (max-width: 450px) {
-    .social-panel-container {
-        left: 20px;
-        bottom: 675px;
-    }
 }
 
 .social-panel-container.visible {
@@ -175,4 +162,84 @@
 .send__mail:hover {
     color: #009b97;
     background-color: #fff;
+}
+
+/* адаптация для телефона 450px */
+@media (max-width: 450px) {
+    .container button {
+        padding: 20px 20px;
+    }
+
+    .social-panel-container {
+        left: 20px;
+        bottom: 675px;
+    }
+}
+
+/* адаптация для планшетов 768px */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .container button {
+        padding: 30px 30px;
+        font-size: 28px;
+    }
+
+    .social-panel-container {
+        bottom: 100px;
+    }
+
+    .social-panel {
+        height: 350px;
+        width: 320px;
+    }
+}
+
+/* адаптация для ноут 1024px */
+@media (min-width: 1024px) and (max-width: 1440px) {
+    .container button {
+        padding: 35px 35px;
+        font-size: 32px;
+    }
+
+    .social-panel-container {
+        bottom: 120px;
+    }
+
+    .social-panel {
+        height: 375px;
+        width: 350px;
+    }
+}
+
+/* адаптация для full hd 1440px */
+@media (min-width: 1440px) and (max-width: 1920px) {
+    .container button {
+        padding: 40px 40px;
+        font-size: 36px;
+    }
+
+    .social-panel-container {
+        bottom: 140px;
+    }
+
+    .social-panel {
+        height: 400px;
+        width: 370px;
+    }
+}
+
+/* адаптация для 2k 1920px */
+@media (min-width: 1920px) {
+    .container button {
+        padding: 50px 50px;
+        font-size: 40px;
+    }
+
+    .social-panel-container {
+        bottom: 160px;
+    }
+
+    .social-panel {
+        height: 450px;
+        width: 420px;
+    }
 }

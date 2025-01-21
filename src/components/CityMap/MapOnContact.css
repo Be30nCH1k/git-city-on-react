@@ -1,6 +1,36 @@
 .MapOnContact {
     margin-top: 240px;
 }
+
+/* для планшетов 768px */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .MapOnContact {
+        margin-top: 150px;
+    }
+}
+
+/* для ноут 1024px */
+@media (min-width: 1024px) and (max-width: 1440px) {
+    .MapOnContact {
+        margin-top: 200px;
+    }
+}
+
+/* для full hd 1920 */
+@media (min-width: 1920px) {
+    .MapOnContact {
+        margin-top: 240px;
+    }
+}
+
+/* для 2k 2560 */
+@media (min-width: 2560px) {
+    .MapOnContact {
+        margin-top: 300px;
+    }
+}
+
+/* для телефона 450px */
 @media (max-width: 450px) {
     .MapOnContact {
         margin-top: 50px;

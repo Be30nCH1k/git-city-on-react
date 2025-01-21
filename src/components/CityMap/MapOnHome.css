@@ -1,15 +1,47 @@
 .MapOnHome {
     margin-top: 80px;
 }
+
 .MapOnHome h2 {
     color: #000;
 }
+
 .MapOnHome div {
     display: flex;
     justify-content: center;
 }
+
+/* адаптация для телефона 450px */
 @media (max-width: 450px) {
     .MapOnHome div {
         margin-top: 50px;
+    }
+}
+
+/* адаптация для планшетов 768px*/
+@media (min-width: 768px) and (max-width: 1024px) {
+    .MapOnHome {
+        margin-top: 100px;
+    }
+}
+
+/* адаптация для ноут 1024px */
+@media (min-width: 1024px) and (max-width: 1440px) {
+    .MapOnHome {
+        margin-top: 120px;
+    }
+}
+
+/* адаптация для full hd 1440px */
+@media (min-width: 1440px) and (max-width: 1920px) {
+    .MapOnHome {
+        margin-top: 140px;
+    }
+}
+
+/* адаптация для 2k 1920px */
+@media (min-width: 1920px) {
+    .MapOnHome {
+        margin-top: 160px;
     }
 }

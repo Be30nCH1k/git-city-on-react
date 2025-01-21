@@ -16,6 +16,33 @@ const AttractionList = () => {
 
     const navigate = useNavigate();
 
+    const fetchDataWithCache = async (url) => {
+        const cacheKey = `cache_${url}`;
+        const cachedData = localStorage.getItem(cacheKey);
+
+        // проверка есть ли данные в кеше и не истекло ли время кеширования
+        if (cachedData) {
+            const { data, timestamp } = JSON.parse(cachedData);
+            const now = new Date().getTime();
+            const cacheDuration = 60 * 1000; // 1 минута
+
+            if (now - timestamp < cacheDuration) {
+                return data;
+            }
+        }
+
+        // если данных нет в кеше или кеш истек запрос к серверу
+        const response = await fetch(url);
+        const data = await response.json();
+
+        localStorage.setItem(
+            cacheKey,
+            JSON.stringify({ data, timestamp: new Date().getTime() }),
+        );
+
+        return data;
+    };
+
     // функция поиска
     const handleSearch = (e) => {
         setSearchQuery(e.target.value);
@@ -60,20 +87,15 @@ const AttractionList = () => {
                 ...item,
                 lat: parseFloat(item.lat),
                 lng: parseFloat(item.lng),
-                img: item.img.startsWith("/")
-                    ? `${process.env.PUBLIC_URL}${item.img}`
-                    : item.img,
             }));
         },
-        staleTime: 100 * 60 * 5, // кешировать данные на 5 минут
     });
 
-    // загрузка категорий с использованием useQuery
+    // загрузка категорий useQuery
     const { data: categories } = useQuery({
         queryKey: ["categories"],
         queryFn: async () => {
-            const response = await fetch(mochApi);
-            const data = await response.json();
+            const data = await fetchDataWithCache(mochApi);
             return [...new Set(data.map((item) => item.category))];
         },
     });
@@ -121,7 +143,9 @@ const AttractionList = () => {
                 </select>
             </div>
             {isLoading ? (
-                <div id="loader" className="loader"></div>
+                <div id="loader" className="loader">
+                    <div className="spinner"></div>{" "}
+                </div>
             ) : isError ? (
                 <div className="ErrorLoad">Проблема загрузки</div>
             ) : (

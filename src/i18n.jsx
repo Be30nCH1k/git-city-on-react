@@ -78,10 +78,8 @@ const resources = {
             news2: "Muscovites and city guests are invited to the new season of 'Open#Mosprom' tours",
             quickLinks: "Quick Links",
 
-            address: "Novosibirsk, Krasny Prospekt, 39",
             phone1: "+7 (123) 456 78 90",
             phone2: "+7 (098) 765 43 21",
-            email: "info@email.com",
 
             contactUs: "Contact Us",
             nameLabel: "Name",
@@ -93,7 +91,6 @@ const resources = {
 
             cityMapTitle: "City Map",
 
-            popularAttractions: "Popular City Attractions",
             sortByName: "Sort by Name",
             sortAsc: "A-Z",
             sortDesc: "Z-A",
@@ -123,7 +120,7 @@ const resources = {
             contact: "Контакты",
 
             popularAttractions: "Популярные достопримечательности городов",
-            dramaTheaterTitle: "Театр Драммы в Томске",
+            dramaTheaterTitle: "Театр Драмы в Томске",
             dramaTheaterDescription:
                 "Томский областной театр драмы - один из старейших в Сибири...",
             galileoParkTitle: "Парк Чудес Галилео в Новосибирске",
@@ -153,8 +150,6 @@ const resources = {
 
             phone1: "+7 (123) 456 78 90",
             phone2: "+7 (098) 765 43 21",
-            address: "Новосибирск, Красный пр-т., 39",
-            email: "info@email.com",
 
             contactUs: "Связаться с нами",
             nameLabel: "Имя",
@@ -166,7 +161,6 @@ const resources = {
 
             cityMapTitle: "Карта Города",
 
-            popularAttractions: "Популярные достопримечательности городов",
             sortByName: "Сортировать по алфавиту",
             sortAsc: "А-Я",
             sortDesc: "Я-А",
@@ -224,8 +218,6 @@ const resources = {
                 },
             ],
             backToList: "Вернуться назад",
-
-            loading: "Загрузка",
         },
     },
 };

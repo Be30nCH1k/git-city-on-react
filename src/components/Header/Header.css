@@ -20,11 +20,7 @@ body {
     height: 100vh;
     width: 100%;
 }
-@media (max-width: 450px) {
-    .main__section {
-        height: 100vh;
-    }
-}
+
 .main__img {
     position: absolute;
     z-index: -1;
@@ -32,54 +28,38 @@ body {
     object-fit: cover;
     height: 100%;
 }
+
 .header {
     background-color: #162e44;
 }
-@media (max-width: 450px) {
-    .header {
-        height: 10vh;
-        display: flex;
-        justify-content: space-around;
-    }
-}
+
 .header__img {
     top: 10px;
     height: 75px;
     width: 250px;
 }
-@media (max-width: 450px) {
-    .header__img {
-        height: 50px;
-        width: 175px;
-    }
-}
+
 .header__nav {
     display: flex;
     justify-content: space-around;
     margin-bottom: -200px;
 }
-@media (max-width: 450px) {
-    .header__nav {
-        margin-bottom: 0;
-    }
-}
+
 .flag {
     display: flex;
     justify-content: space-between;
     max-width: 170px;
 }
+
 .flag:first-child {
     margin-left: 30px;
 }
+
 .header__list {
     display: flex;
     padding: 25px;
 }
-@media (max-width: 450px) {
-    .header__list {
-        display: none;
-    }
-}
+
 .main__btn {
     margin-left: 30px;
     font-size: 18px;
@@ -116,32 +96,22 @@ body {
     transition-duration: 400ms;
     transition-property: width, left;
 }
+
 .header__title {
     padding-top: 150px;
     text-align: center;
     font-weight: 400;
     color: white;
 }
+
 .header__title h1 {
     font-size: 72px;
     padding-top: 150px;
     font-weight: 400;
 }
-@media (max-width: 450px) {
-    .header__title h1 {
-        font-size: 30px;
-        font-weight: 600;
-        padding-top: 0;
-    }
-}
+
 .header__title div {
     font-size: 48px;
-}
-@media (max-width: 450px) {
-    .header__title div {
-        font-size: 24px;
-        font-weight: 400;
-    }
 }
 
 .burger-checkbox {
@@ -237,12 +207,7 @@ body {
 .menu {
     display: none;
 }
-@media (max-width: 450px) {
-    .menu {
-        display: block;
-        padding-top: 10px;
-    }
-}
+
 nav button {
     width: 80px;
     cursor: pointer;
@@ -250,9 +215,155 @@ nav button {
     border: 0;
     background: transparent;
 }
+
 nav button img:hover {
     background-color: #008cff;
     padding: 10px;
     border-radius: 8px;
     transition: all 0.1s;
+}
+
+/* адаптация для телефона 450px */
+@media (max-width: 450px) {
+    .main__section {
+        height: 100vh;
+    }
+
+    .header {
+        height: 10vh;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .header__img {
+        height: 50px;
+        width: 175px;
+    }
+
+    .header__nav {
+        margin-bottom: 0;
+    }
+
+    .header__list {
+        display: none;
+    }
+
+    .header__title h1 {
+        font-size: 30px;
+        font-weight: 600;
+        padding-top: 0;
+    }
+
+    .header__title div {
+        font-size: 24px;
+        font-weight: 400;
+    }
+
+    .menu {
+        display: block;
+        padding-top: 10px;
+    }
+}
+
+/* адаптация для планшетов 768px */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .menu {
+        display: block;
+        padding-top: 10px;
+    }
+    .header__list {
+        display: none;
+    }
+    .header__title h1 {
+        font-size: 60px;
+    }
+
+    .header__title div {
+        font-size: 40px;
+    }
+
+    .header__img {
+        height: 65px;
+        width: 220px;
+    }
+
+    .main__btn {
+        font-size: 16px;
+    }
+
+    .menu-list {
+        width: 180px;
+    }
+}
+
+/* адаптация для ноут 1024px */
+@media (min-width: 1024px) and (max-width: 1440px) {
+    .header__title h1 {
+        font-size: 72px;
+    }
+
+    .header__title div {
+        font-size: 48px;
+    }
+
+    .header__img {
+        height: 75px;
+        width: 250px;
+    }
+
+    .main__btn {
+        font-size: 18px;
+    }
+
+    .menu-list {
+        width: 200px;
+    }
+}
+
+/* адаптация для full hd 1440px */
+@media (min-width: 1440px) and (max-width: 1920px) {
+    .header__title h1 {
+        font-size: 80px;
+    }
+
+    .header__title div {
+        font-size: 56px;
+    }
+
+    .header__img {
+        height: 85px;
+        width: 280px;
+    }
+
+    .main__btn {
+        font-size: 20px;
+    }
+
+    .menu-list {
+        width: 220px;
+    }
+}
+
+/* адаптация для 2k 1920px */
+@media (min-width: 1920px) {
+    .header__title h1 {
+        font-size: 90px;
+    }
+
+    .header__title div {
+        font-size: 64px;
+    }
+
+    .header__img {
+        height: 95px;
+        width: 300px;
+    }
+
+    .main__btn {
+        font-size: 22px;
+    }
+
+    .menu-list {
+        width: 240px;
+    }
 }
