@@ -32,7 +32,7 @@ export default [
             "react/jsx-uses-react": "off",
             "no-unused-vars": "warn",
             "no-undef": "error",
-            "no-console": "warn",
+            "no-console": ["error", { allow: ["warn", "error"] }],
         },
         settings: {
             react: {

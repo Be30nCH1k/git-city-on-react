@@ -1,4 +1,3 @@
-import React from "react";
 import { useTranslation } from "react-i18next";
 import "./MapOnHome.css";
 import "./MapOnContact.css";

@@ -1,4 +1,3 @@
-import React from "react";
 import "./PopularAttractions.css";
 import { useTranslation } from "react-i18next";
 

@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import "./AttractionsDetail.css";
@@ -67,7 +67,7 @@ const AttractionDetail = () => {
                 const data = await response.json();
                 setAttraction(data);
             } catch (error) {
-                console.error(t("dataLoadError"), error);
+                console.error(error);
             } finally {
                 setLoading(false);
             }

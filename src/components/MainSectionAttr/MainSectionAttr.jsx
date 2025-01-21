@@ -1,6 +1,6 @@
-import React from "react";
 import { useTranslation } from "react-i18next";
 import "./MainSectionAttr.css";
+import PropTypes from "prop-types";
 
 const MainSection = ({ searchQuery, handleSearch }) => {
     const { t } = useTranslation();
@@ -23,6 +23,11 @@ const MainSection = ({ searchQuery, handleSearch }) => {
             </form>
         </section>
     );
+};
+
+MainSection.propTypes = {
+    searchQuery: PropTypes.string.isRequired,
+    handleSearch: PropTypes.func.isRequired,
 };
 
 export default MainSection;

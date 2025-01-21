@@ -1,4 +1,3 @@
-import React from "react";
 import Routes from "./routes";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import "./i18n";
