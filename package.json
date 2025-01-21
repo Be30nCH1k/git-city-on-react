@@ -2,19 +2,21 @@
     "name": "git-city-on-react",
     "homepage": "https://be30nch1k.github.io/git-city-on-react",
     "version": "0.1.0",
+    "type": "module",
     "private": true,
     "dependencies": {
         "@react-google-maps/api": "^2.20.5",
         "@tanstack/react-query": "^5.63.0",
         "cra-template": "1.2.0",
         "i18next": "^23.16.8",
-        "pre-commit": "^1.2.2",
+        "pre-commit": "^1.0.10",
         "prop-types": "^15.8.1",
         "react": "^19.0.0",
         "react-dom": "^19.0.0",
         "react-i18next": "^15.4.0",
         "react-router-dom": "^7.1.1",
-        "react-scripts": "^5.0.1"
+        "react-scripts": "^5.0.1",
+        "typescript": "^3.9.10"
     },
     "scripts": {
         "predeploy": "npm run build",
@@ -47,18 +49,24 @@
         ]
     },
     "devDependencies": {
+        "@babel/eslint-parser": "^7.26.5",
         "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+        "@babel/preset-react": "^7.26.3",
+        "@eslint/eslintrc": "^3.2.0",
         "@eslint/js": "^9.18.0",
         "eslint": "^9.18.0",
         "eslint-config-prettier": "^10.0.1",
+        "eslint-config-react-app": "^7.0.1",
         "eslint-plugin-prettier": "^5.2.3",
         "eslint-plugin-react": "^7.37.4",
         "gh-pages": "^6.3.0",
         "globals": "^15.14.0",
         "husky": "^9.1.7",
         "lint-staged": "^15.3.0",
-        "prettier": "^3.4.2",
-        "typescript": "^4.9.5"
+        "prettier": "^3.4.2"
+    },
+    "overrides": {
+        "eslint": "^9.18.0"
     },
     "lint-staged": {
         "**/*.{js,jsx,ts,tsx}": [

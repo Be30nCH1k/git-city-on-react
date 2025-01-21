@@ -4,8 +4,7 @@ import ContactPage from "./pages/ContactPage/ContactPage";
 import AttractionPage from "./pages/AttractionsPage/AttractionsPage";
 import AttractionDetail from "./components/AttractionsDetail/AttractionsDetail";
 import ErrorPage from "./pages/ErrorPage/ErrorPage";
-
-// Константы для путей
+// константы для путей
 const PATHS = {
     HOME: "/",
     CONTACT: "/contact",
@@ -13,7 +12,7 @@ const PATHS = {
     ATTRACTION_DETAIL: "/attractions/id/:id",
 };
 
-// Создание маршрутов
+// cоздание маршрутов
 const router = createBrowserRouter(
     [
         {
@@ -33,16 +32,15 @@ const router = createBrowserRouter(
             element: <AttractionDetail />,
         },
         {
-            path: "*", // Ловит все несуществующие маршруты
-            element: <ErrorPage />, // Отображает кастомную страницу 404
+            path: "*", // ловит несуществующие маршруты
+            element: <ErrorPage />, // отображает страницу 404
         },
     ],
     {
-        basename: process.env.PUBLIC_URL || "", // Указываем базовый путь
+        basename: process.env.PUBLIC_URL || "", // базовый путь
     },
 );
 
-// Компонент Routes
 export default function Routes() {
     return <RouterProvider router={router} />;
 }

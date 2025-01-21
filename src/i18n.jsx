@@ -1,7 +1,7 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 
-// Переводы для разных языков
+// переводы для разных языков
 const resources = {
     en: {
         translation: {

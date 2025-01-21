@@ -5,6 +5,7 @@ import PopularAttractions from "../../components/PopularAttractions/PopularAttra
 import GuaranteesSlider from "../../components/GuaranteesSlider/GuaranteesSlider";
 import CityMap from "../../components/CityMap/CityMap";
 import Footer from "../../components/Footer/Footer";
+import MainHome from "../../components/MainHome/MainHome";
 
 const HomePage = () => {
     const { t } = useTranslation();
@@ -12,29 +13,7 @@ const HomePage = () => {
     return (
         <div className="home-page">
             <Header />
-            <section className="main__section">
-                <div id="main__slider">
-                    <img
-                        className="main__img"
-                        src={`${process.env.PUBLIC_URL}/assets/backroundImg/main_backgroud-darken.jpg`}
-                        alt=""
-                    />
-                    <img
-                        className="main__img"
-                        src={`${process.env.PUBLIC_URL}/assets/backroundImg/86-photoaidcom-darken.jpg`}
-                        alt=""
-                    />
-                    <img
-                        className="main__img"
-                        src={`${process.env.PUBLIC_URL}/assets/backroundImg/orig-photoaidcom-darken.jpg`}
-                        alt=""
-                    />
-                </div>
-                <div className="header__title">
-                    <h1>{t("bestTours")}</h1>
-                    <div>{t("showEveryCorner")}</div>
-                </div>
-            </section>
+            <MainHome />
             <PopularCities />
             <PopularAttractions />
             <GuaranteesSlider />

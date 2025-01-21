@@ -6,7 +6,7 @@ const Header = () => {
     const { t, i18n } = useTranslation();
 
     const changeLanguage = (language) => {
-        i18n.changeLanguage(language); // Изменение языка
+        i18n.changeLanguage(language); // изменение языка
     };
 
     return (
