@@ -73,7 +73,7 @@ const AttractionDetail = () => {
         };
 
         fetchAttraction();
-    }, [id, t]);
+    }, [id]);
 
     // загрузка отзывов
     useEffect(() => {
@@ -91,7 +91,7 @@ const AttractionDetail = () => {
         };
 
         fetchReviews();
-    }, [id, t]);
+    }, [id]);
 
     const handleAddReview = async (e) => {
         e.preventDefault();
