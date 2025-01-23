@@ -5,8 +5,8 @@ export default function ErrorPage() {
 
     return (
         <div>
-            <h1>Упс! Что-то пошло не так.</h1>
-            <p>Извините, произошла непредвиденная ошибка.</p>
+            <h1>Что-то пошло не так</h1>
+            <p>произошла непредвиденная ошибка.</p>
             <p>
                 <i>{error.statusText || error.message}</i>
             </p>

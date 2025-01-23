@@ -25,9 +25,9 @@ const MainSection = ({ searchQuery, handleSearch }) => {
     );
 };
 
-MainSection.propTypes = {
-    searchQuery: PropTypes.string.isRequired,
-    handleSearch: PropTypes.func.isRequired,
-};
+// MainSection.propTypes = {
+//     searchQuery: PropTypes.string.isRequired,
+//     handleSearch: PropTypes.func.isRequired,
+// };
 
 export default MainSection;
