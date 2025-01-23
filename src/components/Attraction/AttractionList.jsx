@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import "./AttractionList.css";
+import MainSectionAttr from "../MainSectionAttr/MainSectionAttr";
 import { useTranslation } from "react-i18next";
 
 const AttractionList = () => {
@@ -16,70 +17,91 @@ const AttractionList = () => {
     const navigate = useNavigate();
 
     const fetchDataWithCache = async (url) => {
-        const cacheKey = `cache_${url}`;
-        const cachedData = localStorage.getItem(cacheKey);
+        try {
+            const cacheKey = `cache_${url}`;
+            const cachedData = localStorage.getItem(cacheKey);
 
-        // проверка есть ли данные в кеше и не истекло ли время кеширования
-        if (cachedData) {
-            const { data, timestamp } = JSON.parse(cachedData);
-            const now = new Date().getTime();
-            const cacheDuration = 60 * 1000; // 1 минута
+            if (cachedData) {
+                const { data, timestamp } = JSON.parse(cachedData);
+                const now = new Date().getTime();
+                const cacheDuration = 60 * 1000; // 1 минута
 
-            if (now - timestamp < cacheDuration) {
-                return data;
+                if (now - timestamp < cacheDuration) {
+                    console.log("Данные из кеша:", data);
+                    return data;
+                }
             }
+
+            const response = await fetch(url);
+            if (!response.ok) {
+                throw new Error(`Ошибка HTTP: ${response.status}`);
+            }
+            const data = await response.json();
+            console.log("Данные с сервера:", data);
+
+            localStorage.setItem(
+                cacheKey,
+                JSON.stringify({ data, timestamp: new Date().getTime() }),
+            );
+
+            return data;
+        } catch (error) {
+            console.error("Ошибка при загрузке данных:", error);
+            throw error;
         }
-
-        // если данных нет в кеше или кеш истек запрос к серверу
-        const response = await fetch(url);
-        const data = await response.json();
-
-        localStorage.setItem(
-            cacheKey,
-            JSON.stringify({ data, timestamp: new Date().getTime() }),
-        );
-
-        return data;
     };
 
-    // функция поиска
     const handleSearch = (e) => {
         setSearchQuery(e.target.value);
         setCurrentPage(1);
     };
 
-    // функция сортировки по имени
     const handleSortByName = () => {
-        setSortOrder(sortOrder === "asc" ? "desc" : "asc");
+        setSortOrder((prevOrder) => (prevOrder === "asc" ? "desc" : "asc"));
     };
 
-    // функция категории
     const handleCategoryChange = (e) => {
         setSelectedCategory(e.target.value);
         setCurrentPage(1);
     };
 
-    // загрузка данных с использованием useQuery
     const {
         data: attractions,
         isLoading,
         isError,
     } = useQuery({
-        queryKey: ["attractions", currentPage, searchQuery, selectedCategory],
+        queryKey: [
+            "attractions",
+            currentPage,
+            searchQuery,
+            selectedCategory,
+            sortOrder,
+        ],
         queryFn: async () => {
             const url = new URL(mochApi);
+
+            // пагинация
             url.searchParams.append("page", currentPage);
             url.searchParams.append("limit", itemsPerPage);
 
-            if (searchQuery) {
-                url.searchParams.append("name", searchQuery);
-            }
+            // сортировка
+            url.searchParams.append("sortBy", "name"); // поле
+            url.searchParams.append("order", sortOrder); // сортировка
 
+            // фильтрация
             if (selectedCategory) {
                 url.searchParams.append("category", selectedCategory);
             }
 
+            // поиск
+            if (searchQuery) {
+                url.searchParams.append("name", searchQuery);
+            }
+
             const response = await fetch(url);
+            if (!response.ok) {
+                throw new Error(`Ошибка HTTP: ${response.status}`);
+            }
             const data = await response.json();
 
             return data.map((item) => ({
@@ -90,7 +112,6 @@ const AttractionList = () => {
         },
     });
 
-    // загрузка категорий useQuery
     const { data: categories } = useQuery({
         queryKey: ["categories"],
         queryFn: async () => {
@@ -99,17 +120,7 @@ const AttractionList = () => {
         },
     });
 
-    // сортировка данных
-    const sortedAttractions = React.useMemo(() => {
-        if (!attractions) return [];
-        return [...attractions].sort((a, b) => {
-            if (sortOrder === "asc") {
-                return a.name.localeCompare(b.name);
-            } else {
-                return b.name.localeCompare(a.name);
-            }
-        });
-    }, [attractions, sortOrder]);
+    const sortedAttractions = attractions || [];
 
     return (
         <section className="info" id="infoSection">
@@ -143,18 +154,20 @@ const AttractionList = () => {
             </div>
             {isLoading ? (
                 <div id="loader" className="loader">
-                    <div className="spinner"></div>{" "}
+                    <div className="spinner"></div>
                 </div>
             ) : isError ? (
                 <div className="ErrorLoad">{t("ErrorLoad")}</div>
+            ) : sortedAttractions.length === 0 ? (
+                <div className="no-results">{t("noResults")}</div>
             ) : (
                 <div id="data-list">
-                    {sortedAttractions.map((attraction, index) => (
-                        <div key={index} className="info__main">
+                    {sortedAttractions.map((attraction) => (
+                        <div key={attraction.id} className="info__main">
                             <img
                                 className="info__img"
                                 src={attraction.img}
-                                alt={`картинки ${index + 1}`}
+                                alt={`картинки ${attraction.name}`}
                             />
                             <div className="info__box">
                                 <div className="info__title">
@@ -178,7 +191,7 @@ const AttractionList = () => {
             <div id="pagination">
                 {Array.from(
                     { length: Math.ceil(100 / itemsPerPage) },
-                    (q, e) => e + 1,
+                    (_, index) => index + 1,
                 ).map((page) => (
                     <button key={page} onClick={() => setCurrentPage(page)}>
                         {page}

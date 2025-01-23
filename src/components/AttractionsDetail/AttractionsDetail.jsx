@@ -63,7 +63,6 @@ const AttractionDetail = () => {
                 const response = await fetch(
                     `https://6729bdac6d5fa4901b6e27f4.mockapi.io/attractions/${id}`,
                 );
-                if (!response.ok) throw new Error("Ошибка загрузки данных");
                 const data = await response.json();
                 setAttraction(data);
             } catch (error) {

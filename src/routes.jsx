@@ -1,4 +1,10 @@
-import { createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import HomePage from "./pages/HomePage/HomePage";
+import ContactPage from "./pages/ContactPage/ContactPage";
+import AttractionPage from "./pages/AttractionsPage/AttractionsPage";
+import AttractionDetail from "./components/AttractionsDetail/AttractionsDetail";
+import ErrorPage from "./pages/ErrorPage/ErrorPage";
+
 // константы для путей
 const PATHS = {
     HOME: "/",
